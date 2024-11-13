@@ -60,8 +60,8 @@ export default function Home() {
             <Visibility />
             <Pressure />
           </div>
-          {/* <div className="mapbox-con mt-4 flex gap-4">
-            <Mapbox />
+          <div className="mapbox-con mt-4 flex gap-4">
+            {/* <Mapbox /> */}
             <div className="states flex flex-col gap-3 flex-1">
               <h2 className="flex items-center gap-2 font-medium">
                 Top Large Cities
@@ -82,7 +82,7 @@ export default function Home() {
                 })}
               </div>
             </div>
-          </div> */}
+          </div>
         </div>
       </div>
     </main>
