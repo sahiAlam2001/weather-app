@@ -1,4 +1,5 @@
 "use client";
+import { useEffect, useState } from "react";
 import AirPollution from "./Components/AirPollution/AirPollution";
 import DailyForecast from "./Components/DailyForecast/DailyForecast";
 import FeelsLike from "./Components/FeelsLike/FeelsLike";
@@ -19,13 +20,23 @@ import { useGlobalContextUpdate } from "./context/globalContext";
 export default function Home() {
   const { setActiveCityCoords } = useGlobalContextUpdate();
 
+  // State to manage whether the component has mounted
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    // This will ensure the component is mounted before using `window`
+    setIsMounted(true);
+  }, []);
+
   const getClickedCityCords = (lat: number, lon: number) => {
     setActiveCityCoords([lat, lon]);
 
-    // window.scrollTo({
-    //   top: 0,
-    //   behavior: "smooth",
-    // });
+    if (isMounted) {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    }
   };
 
   return (
