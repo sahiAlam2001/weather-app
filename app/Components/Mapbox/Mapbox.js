@@ -47,10 +47,10 @@ function Mapbox() {
         className="rounded-lg m-4"
         style={{ height: "100%", width: "100%" }}
       >
-        <TileLayer
+        {/* <TileLayer
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        />
+        /> */}
 
         {/* <FlyToActiveCity activeCityCords={activeCityCords} /> */}
       </MapContainer>
